@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PlantMe Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B5249",
+              "primary-hover": "#2C3E37",
+              "accent-green": "#516960",
+              "background-light": "#FFFFFF",
+              "background-dark": "#111827",
+              "surface-light": "#F3F4F6",
+              "surface-dark": "#1F2937",
+              "text-light": "#1F2937",
+              "text-dark": "#F9FAFB",
+              "muted-light": "#6B7280",
+              "muted-dark": "#9CA3AF",
+              "contact-bg": "#7B8C86",
+              "input-border": "#D1D5DB",
+            },
+            borderRadius: {
+              DEFAULT: "4px",
+              lg: "0.5rem",
+              xl: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300"
+  >
+    <header
+      class="w-full px-12 py-4 border-b border-gray-100 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm"
+    >
+      <div
+        class="flex items-center space-x-8 w-full md:w-auto justify-between md:justify-start"
+      >
+        <a class="flex items-center gap-2 group" href="#">
+          <div class="logo-container">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="1"
+                y="1"
+                width="14"
+                height="14"
+                rx="1"
+                stroke="#3A6150"
+                stroke-width="2"
+              />
+              <rect
+                x="19"
+                y="19"
+                width="14"
+                height="14"
+                rx="1"
+                fill="#3A6150"
+                stroke="#3A6150"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <button class="md:hidden text-gray-600 dark:text-gray-300">
+            <span class="material-icons">menu</span>
+          </button>
+        </a>
+        <nav
+          class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300"
+        >
+          <a class="hover:text-primary transition-colors" href="#">About Us</a>
+          <span class="text-gray-300 dark:text-gray-700">|</span>
+          <a class="hover:text-primary transition-colors" href="#"
+            >Contact Us</a
+          >
+          <span class="text-gray-300 dark:text-gray-700">|</span>
+          <a class="hover:text-primary transition-colors" href="#">Blog</a>
+          <span class="text-gray-300 dark:text-gray-700">|</span>
+          <a class="hover:text-primary transition-colors" href="#">Site Map</a>
+          <span class="text-gray-300 dark:text-gray-700">|</span>
+          <div
+            class="relative group cursor-pointer flex items-center gap-1 hover:text-primary"
+          >
+            Eng <span class="material-icons text-sm">expand_more</span>
+          </div>
+        </nav>
+      </div>
+      <div class="mt-4 md:mt-0 w-full md:w-auto relative">
+        <div
+          class="flex items-center border border-gray-300 dark:border-gray-600 rounded overflow-hidden max-w-xs ml-auto"
+        >
+          <input
+            class="border-none focus:ring-0 text-sm px-4 py-2 w-64 bg-transparent dark:text-white dark:placeholder-gray-400"
+            placeholder="Search this site"
+            type="text"
+          />
+          <button
+            class="bg-primary hover:bg-primary-hover text-white p-2 flex items-center justify-center transition-colors"
+          >
+            <span class="material-icons text-lg">search</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section
+      class="max-w-7xl mx-auto px-6 py-12 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+    >
+      <div class="space-y-6">
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight"
+        >
+          Lorem ipsum dolor sit amet
+        </h1>
+        <h2
+          class="text-xl md:text-2xl font-medium text-accent-green dark:text-gray-300"
+        >
+          Lorem ipsum dolor sit amet
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+          tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+          tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies. Urna
+          hendrerit morbi sed gravida. Nulla aliquam ac diam amet, sagittis, ut
+          ultricies. Urna hendrerit morbi sed gravida.
+        </p>
+        <button
+          class="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded shadow-lg transition-transform transform hover:-translate-y-1"
+        >
+          Buy Now
+        </button>
+      </div>
+      <div class="relative h-[648px] md:h-[648px] w-full">
+        <img
+          alt="Fresh green monstera leaves with water drops"
+          class="w-full h-full object-cover rounded-lg shadow-2xl"
+          src="./img/89adb1f54b500f1c53ebd4da32f47135ee07fa13.jpg"
+        />
+      </div>
+    </section>
+    <section
+      class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8"
+    >
+      <div
+        class="bg-primary text-white rounded-lg p-6 flex flex-col sm:flex-row gap-6 items-start shadow-xl"
+      >
+        <div class="w-full sm:w-1/3 h-48 sm:h-full shrink-0">
+          <img
+            alt="Dark green leaves pattern"
+            class="w-[180px] h-[230px] object-cover rounded opacity-80 hover:opacity-100 transition-opacity"
+            src="./img/4ee6331505f45146cbd425e7bc6b9e75ee5dfa5d.jpg"
+          />
+        </div>
+        <div class="flex flex-col h-full justify-between space-y-4">
+          <div>
+            <h3 class="text-xl font-bold mb-3">About Us</h3>
+            <p class="text-sm text-gray-200 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+          </div>
+          <a
+            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto"
+            href="#"
+          >
+            Learn more about
+            <span class="material-icons text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="bg-primary text-white rounded-lg p-6 flex flex-col sm:flex-row gap-6 items-start shadow-xl"
+      >
+        <div class="w-full sm:w-1/3 h-48 sm:h-full shrink-0">
+          <img
+            alt="Detailed leaf texture"
+            class="w-[180px] h-[230px] object-cover rounded opacity-80 hover:opacity-100 transition-opacity"
+            src="./img/4ee6331505f45146cbd425e7bc6b9e75ee5dfa5d.jpg"
+          />
+        </div>
+        <div class="flex flex-col h-full justify-between space-y-4">
+          <div>
+            <h3 class="text-xl font-bold mb-3">About Us 2</h3>
+            <p class="text-sm text-gray-200 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
+              tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+              Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+              sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+              tincidunt posuere eu risus cursus.
+            </p>
+          </div>
+          <a
+            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto"
+            href="#"
+          >
+            Learn more about
+            <span class="material-icons text-sm ml-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="bg-contact-bg dark:bg-gray-800 py-20 px-4 md:px-8 mt-12 transition-colors duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[600px]"
+      >
+        <div
+          class="lg:w-1/3 p-10 relative flex flex-col justify-between overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 z-0 bg-right bg-cover bg-no-repeat"
+            style="
+              background-image: url('./img/9d14ea91c404cb14ece4e073f2f11536d7b9323d.jpg');
+            "
+          >
+            <div class="absolute inset-0 bg-white/10 dark:bg-black/10"></div>
+          </div>
+          <div class="relative z-10">
+            <h2
+              class="text-5xl font-bold text-gray-900 dark:text-white mb-4 font-display"
+            >
+              Contact Us
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-12">
+              Fill up the form and our Team will get back to you within 24
+              hours. Happy to see your message!
+            </p>
+            <div class="space-y-6 text-sm text-gray-700 dark:text-gray-300">
+              <div class="flex items-center gap-4">
+                <a
+                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                  href="#"
+                >
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+                <span>+380 93 15 32 456</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a
+                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                  href="#"
+                >
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+                <span>example@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a
+                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                  href="#"
+                >
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+                <span>Pidmurma 5a, Lviv</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 mt-12 flex gap-4">
+            <a
+              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              href="#"
+            >
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a
+              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              href="#"
+            >
+              <i class="fab fa-twitter text-sm"></i>
+            </a>
+            <a
+              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              href="#"
+            >
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a
+              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              href="#"
+            >
+              <i class="fab fa-linkedin-in text-sm"></i>
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-2/3 p-10 bg-white dark:bg-gray-900">
+          <form class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-1">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >First Name</label
+                >
+                <input
+                  class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
+                  placeholder="John"
+                  type="text"
+                />
+              </div>
+              <div class="space-y-1">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >Last Name</label
+                >
+                <input
+                  class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
+                  placeholder="Doe"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-1">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >Email</label
+                >
+                <input
+                  class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
+                  placeholder="example@gmail.com"
+                  type="email"
+                />
+              </div>
+              <div class="space-y-1">
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >Phone Number</label
+                >
+                <input
+                  class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
+                  placeholder="+1 012 3456 789"
+                  type="tel"
+                />
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-4 text-sm">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <div class="relative flex items-center">
+                    <input
+                      class="peer sr-only custom-radio"
+                      name="role"
+                      type="radio"
+                      value="dev"
+                    />
+                    <div
+                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 dark:text-gray-400"
+                    >UI Developer</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <div class="relative flex items-center">
+                    <input
+                      class="peer sr-only custom-radio"
+                      name="role"
+                      type="radio"
+                      value="design"
+                    />
+                    <div
+                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 dark:text-gray-400"
+                    >UI/UX Developer</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <div class="relative flex items-center">
+                    <input
+                      class="peer sr-only custom-radio"
+                      name="role"
+                      type="radio"
+                      value="access"
+                    />
+                    <div
+                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 dark:text-gray-400"
+                    >Accessibility Expert</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <div class="relative flex items-center">
+                    <input
+                      class="peer sr-only custom-radio"
+                      name="role"
+                      type="radio"
+                      value="qa"
+                    />
+                    <div
+                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 dark:text-gray-400"
+                    >QA Engineer</span
+                  >
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <div class="relative flex items-center">
+                    <input
+                      class="peer sr-only custom-radio"
+                      name="role"
+                      type="radio"
+                      value="other"
+                    />
+                    <div
+                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
+                    ></div>
+                  </div>
+                  <span class="text-gray-600 dark:text-gray-400">Other</span>
+                </label>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Message</label
+              >
+              <textarea
+                class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors resize-none placeholder-gray-400"
+                placeholder="Write your message.."
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <div class="relative flex items-center">
+                  <input
+                    class="peer sr-only custom-radio"
+                    name="term"
+                    type="checkbox"
+                    value="term1"
+                  />
+                  <div
+                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary"
+                  ></div>
+                </div>
+                <span class="text-gray-600 dark:text-gray-400"
+                  >Accept Term</span
+                >
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <div class="relative flex items-center">
+                  <input
+                    class="peer sr-only"
+                    name="term"
+                    type="checkbox"
+                    value="term2"
+                  />
+                  <div
+                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary"
+                  ></div>
+                </div>
+                <span class="text-gray-600 dark:text-gray-400"
+                  >Accept Term2</span
+                >
+              </label>
+            </div>
+            <div class="pt-4 flex justify-end">
+              <button
+                class="bg-primary hover:bg-primary-hover text-white px-10 py-3 rounded shadow-lg transition-colors w-full md:w-auto font-medium"
+                type="submit"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-gray-100 dark:border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          <div class="col-span-1 lg:col-span-2 space-y-6">
+            <h3 class="text-3xl font-bold font-display">PlantMe</h3>
+            <p class="text-gray-600 dark:text-gray-400 max-w-sm">
+              Subscribe and be the first to know about our news and promotions.
+            </p>
+            <div class="flex items-center max-w-sm gap-4">
+              <input
+                class="flex-grow border-b border-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-colors text-sm"
+                placeholder="example@gmail.com"
+                type="email"
+              />
+              <button
+                class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded text-sm font-medium transition-colors"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-span-1">
+            <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-300">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Site Map</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <h4 class="font-bold mb-4">Contacts</h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>+38 063 072 0121</li>
+              <li>
+                <a
+                  class="underline decoration-gray-300 hover:text-primary"
+                  href="mailto:plantme.store@gmail.com"
+                  >plantme.store@gmail.com</a
+                >
+              </li>
+            </ul>
+            <div class="flex gap-4 mt-6 text-2xl">
+              <i class="fab fa-cc-visa text-blue-900 dark:text-blue-400"></i>
+              <i
+                class="fab fa-cc-mastercard text-red-600 dark:text-red-400"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-center items-center text-xs text-gray-500 dark:text-gray-400"
+        >
+          <p>© 2022 PlantMe. All Rights Reserved</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a class="hover:text-primary" href="#">Privacy Policy</a>
+            <a class="hover:text-primary" href="#">Terms of service</a>
+            <a class="hover:text-primary" href="#">Language</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

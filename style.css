@@ -1,0 +1,37 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+.custom-radio:checked + div {
+  border-color: #3b5249;
+}
+
+.custom-radio:checked + div::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #3b5249;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: "Poppins", sans-serif;
+}
