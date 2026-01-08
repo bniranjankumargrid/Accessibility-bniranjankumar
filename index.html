@@ -64,6 +64,8 @@
         <a class="flex items-center gap-2 group" href="#">
           <div class="logo-container">
             <svg
+              role="img"
+              aria-label="PlantMe Logo"
               width="34"
               height="34"
               viewBox="0 0 34 34"
@@ -91,8 +93,8 @@
               />
             </svg>
           </div>
-          <button class="md:hidden text-gray-600 dark:text-gray-300">
-            <span class="material-icons">menu</span>
+          <button class="md:hidden text-gray-600 dark:text-gray-300 min-w-[44px] min-h-[44px] flex items-center justify-center p-2" aria-label="Open mobile menu">
+            <span class="material-icons" aria-hidden="true">menu</span>
           </button>
         </a>
         <nav
@@ -108,35 +110,43 @@
           <span class="text-gray-300 dark:text-gray-700">|</span>
           <a class="hover:text-primary transition-colors" href="#">Site Map</a>
           <span class="text-gray-300 dark:text-gray-700">|</span>
-          <div
-            class="relative group cursor-pointer flex items-center gap-1 hover:text-primary"
+          <button
+            class="relative group cursor-pointer flex items-center gap-1 hover:text-primary bg-transparent border-none p-2 min-h-[44px]"
+            aria-haspopup="true"
+            aria-expanded="false"
           >
-            Eng <span class="material-icons text-sm">expand_more</span>
-          </div>
+            Eng <span class="material-icons text-sm" aria-hidden="true">expand_more</span>
+          </button>
         </nav>
       </div>
       <div class="mt-4 md:mt-0 w-full md:w-auto relative">
         <div
           class="flex items-center border border-gray-300 dark:border-gray-600 rounded overflow-hidden max-w-xs ml-auto"
         >
+          <label for="site-search" class="sr-only">Search this site</label>
           <input
-            class="border-none focus:ring-0 text-sm px-4 py-2 w-64 bg-transparent dark:text-white dark:placeholder-gray-400"
+            id="site-search"
+            class="border-none focus:ring-2 focus:ring-primary text-sm px-4 py-2 w-64 bg-transparent dark:text-white dark:placeholder-gray-400"
             placeholder="Search this site"
             type="text"
           />
           <button
-            class="bg-primary hover:bg-primary-hover text-white p-2 flex items-center justify-center transition-colors"
+            class="bg-primary hover:bg-primary-hover text-white p-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors element-focus"
+            aria-label="Search"
           >
-            <span class="material-icons text-lg">search</span>
+            <span class="material-icons text-lg" aria-hidden="true">search</span>
           </button>
         </div>
       </div>
     </header>
+    <main id="main-content">
     <section
       class="max-w-7xl mx-auto px-6 py-12 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      aria-labelledby="hero-heading"
     >
       <div class="space-y-6">
         <h1
+          id="hero-heading"
           class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight"
         >
           Lorem ipsum dolor sit amet
@@ -154,7 +164,7 @@
           ultricies. Urna hendrerit morbi sed gravida.
         </p>
         <button
-          class="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded shadow-lg transition-transform transform hover:-translate-y-1"
+          class="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded shadow-lg transition-transform transform hover:-translate-y-1 element-focus min-h-[44px]"
         >
           Buy Now
         </button>
@@ -169,6 +179,7 @@
     </section>
     <section
       class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8"
+      aria-label="Features"
     >
       <div
         class="bg-primary text-white rounded-lg p-6 flex flex-col sm:flex-row gap-6 items-start shadow-xl"
@@ -182,7 +193,7 @@
         </div>
         <div class="flex flex-col h-full justify-between space-y-4">
           <div>
-            <h3 class="text-xl font-bold mb-3">About Us</h3>
+            <h2 class="text-xl font-bold mb-3">About Us</h2>
             <p class="text-sm text-gray-200 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
               tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
@@ -194,11 +205,12 @@
             </p>
           </div>
           <a
-            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto"
+            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto p-2 min-h-[44px] element-focus"
             href="#"
+            aria-label="Learn more about Us"
           >
             Learn more about
-            <span class="material-icons text-sm ml-1">arrow_forward</span>
+            <span class="material-icons text-sm ml-1" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
       </div>
@@ -214,7 +226,7 @@
         </div>
         <div class="flex flex-col h-full justify-between space-y-4">
           <div>
-            <h3 class="text-xl font-bold mb-3">About Us 2</h3>
+            <h2 class="text-xl font-bold mb-3">About Us 2</h2>
             <p class="text-sm text-gray-200 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
               tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
@@ -226,17 +238,19 @@
             </p>
           </div>
           <a
-            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto"
+            class="inline-flex items-center text-sm font-semibold hover:underline mt-auto p-2 min-h-[44px] element-focus"
             href="#"
+            aria-label="Learn more about Us 2"
           >
             Learn more about
-            <span class="material-icons text-sm ml-1">arrow_forward</span>
+            <span class="material-icons text-sm ml-1" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
       </div>
     </section>
     <section
       class="bg-contact-bg dark:bg-gray-800 py-20 px-4 md:px-8 mt-12 transition-colors duration-300"
+      aria-label="Contact Section"
     >
       <div
         class="max-w-6xl mx-auto bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[600px]"
@@ -265,8 +279,9 @@
             <div class="space-y-6 text-sm text-gray-700 dark:text-gray-300">
               <div class="flex items-center gap-4">
                 <a
-                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-                  href="#"
+                  class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
+                  href="tel:+380931532456"
+                  aria-label="Call +380 93 15 32 456"
                 >
                   <i class="fa fa-phone" aria-hidden="true"></i>
                 </a>
@@ -274,8 +289,9 @@
               </div>
               <div class="flex items-center gap-4">
                 <a
-                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-                  href="#"
+                  class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
+                  href="mailto:example@gmail.com"
+                  aria-label="Email example@gmail.com"
                 >
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                 </a>
@@ -283,8 +299,9 @@
               </div>
               <div class="flex items-center gap-4">
                 <a
-                  class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                  class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
                   href="#"
+                  aria-label="Find us on map"
                 >
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </a>
@@ -294,28 +311,32 @@
           </div>
           <div class="relative z-10 mt-12 flex gap-4">
             <a
-              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
               href="#"
+              aria-label="Facebook"
             >
-              <i class="fab fa-facebook-f text-sm"></i>
+              <i class="fab fa-facebook-f text-sm" aria-hidden="true"></i>
             </a>
             <a
-              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
               href="#"
+              aria-label="Twitter"
             >
-              <i class="fab fa-twitter text-sm"></i>
+              <i class="fab fa-twitter text-sm" aria-hidden="true"></i>
             </a>
             <a
-              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
               href="#"
+              aria-label="Instagram"
             >
-              <i class="fab fa-instagram text-sm"></i>
+              <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
             </a>
             <a
-              class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              class="w-11 h-11 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors element-focus"
               href="#"
+              aria-label="LinkedIn"
             >
-              <i class="fab fa-linkedin-in text-sm"></i>
+              <i class="fab fa-linkedin-in text-sm" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -324,10 +345,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="space-y-1">
                 <label
+                  for="first-name"
                   class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >First Name</label
                 >
                 <input
+                  id="first-name"
                   class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
                   placeholder="John"
                   type="text"
@@ -335,10 +358,12 @@
               </div>
               <div class="space-y-1">
                 <label
+                  for="last-name"
                   class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >Last Name</label
                 >
                 <input
+                  id="last-name"
                   class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
                   placeholder="Doe"
                   type="text"
@@ -348,10 +373,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="space-y-1">
                 <label
+                  for="email"
                   class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >Email</label
                 >
                 <input
+                  id="email"
                   class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
                   placeholder="example@gmail.com"
                   type="email"
@@ -359,10 +386,12 @@
               </div>
               <div class="space-y-1">
                 <label
+                  for="phone"
                   class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >Phone Number</label
                 >
                 <input
+                  id="phone"
                   class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors placeholder-gray-400"
                   placeholder="+1 012 3456 789"
                   type="tel"
@@ -370,109 +399,113 @@
               </div>
             </div>
             <div class="space-y-4">
-              <div class="flex flex-wrap gap-4 text-sm">
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <div class="relative flex items-center">
-                    <input
-                      class="peer sr-only custom-radio"
-                      name="role"
-                      type="radio"
-                      value="dev"
-                    />
-                    <div
-                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
-                    ></div>
-                  </div>
-                  <span class="text-gray-600 dark:text-gray-400"
-                    >UI Developer</span
-                  >
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <div class="relative flex items-center">
-                    <input
-                      class="peer sr-only custom-radio"
-                      name="role"
-                      type="radio"
-                      value="design"
-                    />
-                    <div
-                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
-                    ></div>
-                  </div>
-                  <span class="text-gray-600 dark:text-gray-400"
-                    >UI/UX Developer</span
-                  >
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <div class="relative flex items-center">
-                    <input
-                      class="peer sr-only custom-radio"
-                      name="role"
-                      type="radio"
-                      value="access"
-                    />
-                    <div
-                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
-                    ></div>
-                  </div>
-                  <span class="text-gray-600 dark:text-gray-400"
-                    >Accessibility Expert</span
-                  >
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <div class="relative flex items-center">
-                    <input
-                      class="peer sr-only custom-radio"
-                      name="role"
-                      type="radio"
-                      value="qa"
-                    />
-                    <div
-                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
-                    ></div>
-                  </div>
-                  <span class="text-gray-600 dark:text-gray-400"
-                    >QA Engineer</span
-                  >
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <div class="relative flex items-center">
-                    <input
-                      class="peer sr-only custom-radio"
-                      name="role"
-                      type="radio"
-                      value="other"
-                    />
-                    <div
-                      class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary"
-                    ></div>
-                  </div>
-                  <span class="text-gray-600 dark:text-gray-400">Other</span>
-                </label>
-              </div>
+                <fieldset class="flex flex-wrap gap-4 text-sm border-none p-0 m-0">
+                  <legend class="sr-only">Role</legend>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <div class="relative flex items-center">
+                      <input
+                        class="peer sr-only custom-radio"
+                        name="role"
+                        type="radio"
+                        value="dev"
+                      />
+                      <div
+                        class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
+                      ></div>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >UI Developer</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <div class="relative flex items-center">
+                      <input
+                        class="peer sr-only custom-radio"
+                        name="role"
+                        type="radio"
+                        value="design"
+                      />
+                      <div
+                        class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
+                      ></div>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >UI/UX Developer</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <div class="relative flex items-center">
+                      <input
+                        class="peer sr-only custom-radio"
+                        name="role"
+                        type="radio"
+                        value="access"
+                      />
+                      <div
+                        class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
+                      ></div>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >Accessibility Expert</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <div class="relative flex items-center">
+                      <input
+                        class="peer sr-only custom-radio"
+                        name="role"
+                        type="radio"
+                        value="qa"
+                      />
+                      <div
+                        class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
+                      ></div>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >QA Engineer</span
+                    >
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <div class="relative flex items-center">
+                      <input
+                        class="peer sr-only custom-radio"
+                        name="role"
+                        type="radio"
+                        value="other"
+                      />
+                      <div
+                        class="w-4 h-4 border border-gray-400 rounded-full transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
+                      ></div>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-400">Other</span>
+                  </label>
+                </fieldset>
             </div>
             <div class="space-y-1">
               <label
+                for="message"
                 class="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >Message</label
               >
               <textarea
+                id="message"
                 class="w-full border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 px-0 pb-2 bg-transparent transition-colors resize-none placeholder-gray-400"
                 placeholder="Write your message.."
                 rows="5"
               ></textarea>
             </div>
-            <div class="flex flex-wrap gap-4">
-              <label class="flex items-center gap-2 cursor-pointer">
+            <fieldset class="flex flex-wrap gap-4 border-none p-0 m-0">
+               <legend class="sr-only">Terms</legend>
+               <label class="flex items-center gap-2 cursor-pointer">
                 <div class="relative flex items-center">
                   <input
-                    class="peer sr-only custom-radio"
+                    class="peer sr-only"
                     name="term"
                     type="checkbox"
                     value="term1"
                   />
                   <div
-                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary"
+                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
                   ></div>
                 </div>
                 <span class="text-gray-600 dark:text-gray-400"
@@ -488,17 +521,17 @@
                     value="term2"
                   />
                   <div
-                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary"
+                    class="w-4 h-4 border border-gray-400 rounded transition-colors peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-primary"
                   ></div>
                 </div>
                 <span class="text-gray-600 dark:text-gray-400"
                   >Accept Term2</span
                 >
               </label>
-            </div>
+            </fieldset>
             <div class="pt-4 flex justify-end">
               <button
-                class="bg-primary hover:bg-primary-hover text-white px-10 py-3 rounded shadow-lg transition-colors w-full md:w-auto font-medium"
+                class="bg-primary hover:bg-primary-hover text-white px-10 py-3 rounded shadow-lg transition-colors w-full md:w-auto font-medium element-focus min-h-[44px]"
                 type="submit"
               >
                 Send Message
@@ -508,6 +541,7 @@
         </div>
       </div>
     </section>
+    </main>
     <footer
       class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-gray-100 dark:border-gray-800"
     >
@@ -521,13 +555,15 @@
               Subscribe and be the first to know about our news and promotions.
             </p>
             <div class="flex items-center max-w-sm gap-4">
+              <label for="subscribe-email" class="sr-only">Email address</label>
               <input
+                id="subscribe-email"
                 class="flex-grow border-b border-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-colors text-sm"
                 placeholder="example@gmail.com"
                 type="email"
               />
               <button
-                class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded text-sm font-medium transition-colors"
+                class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded text-sm font-medium transition-colors element-focus min-h-[44px]"
               >
                 Subscribe
               </button>
@@ -569,19 +605,21 @@
                 >
               </li>
             </ul>
-            <div class="flex gap-4 mt-6 text-2xl">
-              <i class="fab fa-cc-visa text-blue-900 dark:text-blue-400"></i>
+            <div class="flex gap-4 mt-6 text-2xl" aria-label="Payment methods">
+              <i class="fab fa-cc-visa text-blue-900 dark:text-blue-400" title="Visa"></i>
               <i
                 class="fab fa-cc-mastercard text-red-600 dark:text-red-400"
+                title="Mastercard"
               ></i>
             </div>
           </div>
         </div>
         <div
-          class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-center items-center text-xs text-gray-500 dark:text-gray-400"
+          class="pt-8 border-t border-gray-100 dark:border-gray-800 grid grid-cols-1 md:grid-cols-3 items-center text-xs text-gray-500 dark:text-gray-400"
         >
-          <p>© 2022 PlantMe. All Rights Reserved</p>
-          <div class="flex space-x-6 mt-4 md:mt-0">
+          <div class="hidden md:block"></div>
+          <p class="text-center">© 2022 PlantMe. All Rights Reserved</p>
+          <div class="flex space-x-6 mt-4 md:mt-0 justify-center md:justify-end">
             <a class="hover:text-primary" href="#">Privacy Policy</a>
             <a class="hover:text-primary" href="#">Terms of service</a>
             <a class="hover:text-primary" href="#">Language</a>
